@@ -26,7 +26,11 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        if(MainManager.mainManagerInstance != null) // Condition to prevent errors for testing purposes in 
+            //the programmer open the Main scene directly.
+        {
+            SetColor(MainManager.teamColor);
+        }
     }
 
     void SetColor(Color c)
